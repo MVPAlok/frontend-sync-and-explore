@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-light text-gray-800;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gradient-card {
+    @apply bg-gradient-card backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
+  
+  .primary-button {
+    @apply bg-gradient-primary hover:opacity-90 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300;
+  }
+  
+  .secondary-button {
+    @apply bg-white/10 hover:bg-white/20 text-primary font-semibold px-6 py-3 rounded-full transition-all duration-300;
+  }
+  
+  .feature-icon {
+    @apply w-12 h-12 bg-gradient-primary rounded-xl p-2.5 text-white;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-primary;
+  }
+}

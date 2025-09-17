@@ -85,47 +85,47 @@ const JoinWaitlist = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-gradient-to-br from-teal-400 to-teal-600 px-8 py-12">
+      <footer className="px-8 py-12" style={{background: 'linear-gradient(to bottom right, #178C95, #178C95)'}}>
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex space-x-8 mb-6 md:mb-0">
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-base font-medium">
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-base font-medium">
                 Service
               </a>
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-base font-medium">
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-base font-medium">
                 Support
               </a>
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-base font-medium">
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-base font-medium">
                 Company
               </a>
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-base font-medium">
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-base font-medium">
                 Legal
               </a>
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-base font-medium">
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-base font-medium">
                 Join Us
               </a>
             </div>
             
             <div className="flex items-center space-x-4">
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={emailIcon} alt="Email" className="w-5 h-5 filter brightness-0 invert" />
               </a>
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5 filter brightness-0 invert" />
               </a>
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={twitterIcon} alt="Twitter" className="w-5 h-5 filter brightness-0 invert" />
               </a>
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={instagramIcon} alt="Instagram" className="w-5 h-5 filter brightness-0 invert" />
               </a>
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={youtubeIcon} alt="YouTube" className="w-5 h-5 filter brightness-0 invert" />
               </a>
             </div>
           </div>
           
-          <div className="text-center text-teal-200 text-sm border-t border-teal-500 pt-6">
+          <div className="text-center text-sm border-t pt-6" style={{color: '#6DDADF', borderColor: '#6DDADF'}}>
             Copyright © Sync&Explore. All rights reserved.
           </div>
         </div>

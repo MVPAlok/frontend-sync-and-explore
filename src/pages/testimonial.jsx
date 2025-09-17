@@ -40,11 +40,11 @@ const Testimonial = () => {
   const currentTestimonial = testimonials[currentSlide];
 
   return (
-    <div className="w-full bg-gradient-to-b from-teal-200 via-cyan-100 to-teal-50 py-24 px-6">
+    <div className="w-full py-24 px-6" style={{background: 'linear-gradient(to bottom, #6DDADF, #ffffff)'}}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-teal-700 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{color: '#178C95'}}>
             What Our Early Users Say?
           </h2>
         </div>
@@ -57,11 +57,11 @@ const Testimonial = () => {
               onClick={prevSlide}
               className="absolute left-0 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-teal-200 flex items-center justify-center hover:bg-teal-50 transition-colors duration-200"
             >
-              <ChevronLeft className="w-6 h-6 text-teal-600" />
+              <ChevronLeft className="w-6 h-6" style={{color: '#178C95'}} />
             </button>
 
             {/* Testimonial Card */}
-            <div className="max-w-4xl mx-16 bg-white rounded-[40px] shadow-2xl p-10 md:p-12 border border-teal-100">
+            <div className="max-w-4xl mx-16 bg-white rounded-[40px] shadow-2xl p-10 md:p-12 border" style={{borderColor: '#6DDADF'}}>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                 {/* Profile Image */}
                 <div className="flex-shrink-0">
@@ -111,7 +111,7 @@ const Testimonial = () => {
               onClick={nextSlide}
               className="absolute right-0 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-teal-200 flex items-center justify-center hover:bg-teal-50 transition-colors duration-200"
             >
-              <ChevronRight className="w-6 h-6 text-teal-600" />
+              <ChevronRight className="w-6 h-6" style={{color: '#178C95'}} />
             </button>
           </div>
 
@@ -122,8 +122,9 @@ const Testimonial = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-teal-600' : 'bg-gray-300'
+                  index === currentSlide ? '' : 'bg-gray-300'
                 }`}
+                style={{backgroundColor: index === currentSlide ? '#178C95' : undefined}}
               />
             ))}
           </div>

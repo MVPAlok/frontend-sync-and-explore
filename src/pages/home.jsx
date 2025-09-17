@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section with gradient background (refined palette) */}
-      <section className="min-h-screen bg-gradient-to-b from-teal-200 via-teal-300 to-cyan-300 relative overflow-hidden px-6 sm:px-8 py-8">
+      <section className="min-h-screen relative overflow-hidden px-6 sm:px-8 py-8" style={{background: 'linear-gradient(to bottom, #6DDADF, #178C95)'}}>
         {/* Decorative dots pattern */}
         <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
           <div className="grid grid-cols-10 gap-2 p-6">
@@ -44,18 +44,18 @@ const Home = () => {
             <div className="absolute left-8 flex items-center">
               <img src={logo} alt="Sync & Explore" className="h-12 w-auto" />
             </div>
-            <div className="bg-teal-600 rounded-full px-3 py-3">
+            <div className="rounded-full px-3 py-3" style={{backgroundColor: '#178C95'}}>
               <div className="flex items-center space-x-2">
-                <button className="text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors text-sm font-medium">
+                <button className="text-white px-6 py-2.5 rounded-full transition-colors text-sm font-medium" style={{backgroundColor: '#178C95'}}>
                   Home
                 </button>
-                <button className="text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors text-sm font-medium">
+                <button className="text-white px-6 py-2.5 rounded-full hover:opacity-80 transition-colors text-sm font-medium">
                   Features
                 </button>
-                <button className="text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors text-sm font-medium">
+                <button className="text-white px-6 py-2.5 rounded-full hover:opacity-80 transition-colors text-sm font-medium">
                   Testimonials
                 </button>
-                <button className="text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors text-sm font-medium">
+                <button className="text-white px-6 py-2.5 rounded-full hover:opacity-80 transition-colors text-sm font-medium">
                   Contact
                 </button>
               </div>
@@ -75,7 +75,7 @@ const Home = () => {
 
             <div className="flex flex-col lg:flex-row items-center min-h-[640px]">
               <div className="lg:w-1/2 lg:pr-8 flex flex-col justify-center">
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{color: '#178C95'}}>
                   We Sync, AI Plans.
                   <br />
                   You Explore
@@ -84,10 +84,10 @@ const Home = () => {
                   AI-powered travel buddy matching and itinerary planning — so you travel smart, not hard.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-full font-medium transition-colors text-base">
+                  <button className="text-white px-8 py-3 rounded-full font-medium transition-colors text-base hover:opacity-90" style={{backgroundColor: '#178C95'}}>
                     Join waitlist
                   </button>
-                  <button className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-3 rounded-full font-medium transition-colors text-base">
+                  <button className="border-2 px-8 py-3 rounded-full font-medium transition-colors text-base hover:opacity-80" style={{borderColor: '#178C95', color: '#178C95'}}>
                     See how it works
                   </button>
                 </div>
@@ -100,19 +100,19 @@ const Home = () => {
                     <img 
                       src={heroBeach}
                       alt="Beach coastline" 
-                      className="w-60 h-80 object-cover rounded-2xl border-8 border-cyan-100 bg-white"
+                      className="w-60 h-80 object-cover rounded-2xl border-8 bg-white" style={{borderColor: '#6DDADF'}}
                     />
                   </div>
                   <div className="absolute -top-10 right-6 z-10 drop-shadow-xl">
                     <img 
                       src={heroMountain}
                       alt="Mountain landscape" 
-                      className="w-64 h-[22rem] object-cover rounded-2xl border-8 border-teal-100 bg-white"
+                      className="w-64 h-[22rem] object-cover rounded-2xl border-8 bg-white" style={{borderColor: '#6DDADF'}}
                     />
                   </div>
                   {/* Calendar icon */}
                   <div className="absolute -left-10 top-1/2 -translate-y-1/2 z-30">
-                    <div className="bg-white p-5 rounded-full shadow-xl border-4 border-teal-200">
+                    <div className="bg-white p-5 rounded-full shadow-xl border-4" style={{borderColor: '#6DDADF'}}>
                       <img src={calendarIcon} alt="Calendar" className="w-10 h-10" />
                     </div>
                   </div>
@@ -124,7 +124,7 @@ const Home = () => {
       </section>
 
       {/* Why Sync & Explore Section */}
-      <section className="bg-gradient-to-b from-cyan-200 via-teal-300 to-teal-200 px-8 py-20 relative">
+      <section className="px-8 py-20 relative" style={{background: 'linear-gradient(to bottom, #178C95, #6DDADF)'}}>
         {/* Decorative plane */}
         <div className="absolute top-12 left-1/4 z-0">
           <img src={planeIcon} alt="Plane" className="w-10 h-10 opacity-30" />
@@ -132,33 +132,33 @@ const Home = () => {
         </div>
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-20" style={{color: '#178C95'}}>
             Why Sync & Explore?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-teal-600 rounded-3xl p-10 text-white text-center min-h-[200px] flex flex-col justify-center">
+            <div className="rounded-3xl p-10 text-white text-center min-h-[200px] flex flex-col justify-center" style={{backgroundColor: '#178C95'}}>
               <div className="mb-6">
                 <img src={calendarWhite} alt="Calendar" className="w-16 h-16 mx-auto" />
               </div>
               <h3 className="font-bold text-xl">Sync<br />Travel Dates</h3>
             </div>
             
-            <div className="bg-teal-600 rounded-3xl p-10 text-white text-center min-h-[200px] flex flex-col justify-center">
+            <div className="rounded-3xl p-10 text-white text-center min-h-[200px] flex flex-col justify-center" style={{backgroundColor: '#178C95'}}>
               <div className="mb-6">
                 <img src={globeIcon} alt="Globe" className="w-16 h-16 mx-auto" />
               </div>
               <h3 className="font-bold text-xl">Explore<br />Destinations</h3>
             </div>
             
-            <div className="bg-teal-600 rounded-3xl p-10 text-white text-center min-h-[200px] flex flex-col justify-center">
+            <div className="rounded-3xl p-10 text-white text-center min-h-[200px] flex flex-col justify-center" style={{backgroundColor: '#178C95'}}>
               <div className="mb-6">
                 <img src={peopleIcon} alt="People" className="w-16 h-16 mx-auto" />
               </div>
               <h3 className="font-bold text-xl">Find Travel<br />Buddies</h3>
             </div>
             
-            <div className="bg-teal-600 rounded-3xl p-10 text-white text-center min-h-[200px] flex flex-col justify-center">
+            <div className="rounded-3xl p-10 text-white text-center min-h-[200px] flex flex-col justify-center" style={{backgroundColor: '#178C95'}}>
               <div className="mb-6">
                 <img src={houseIcon} alt="House" className="w-16 h-16 mx-auto" />
               </div>
@@ -169,16 +169,16 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gradient-to-b from-teal-200 via-cyan-100 to-teal-50 px-8 py-20">
+      <section className="px-8 py-20" style={{background: 'linear-gradient(to bottom, #6DDADF, #ffffff)'}}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-5xl lg:text-6xl font-bold text-center text-teal-600 mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold text-center mb-20" style={{color: '#178C95'}}>
             What Our Early Users Say?
           </h2>
           
           <div className="relative flex items-center justify-center">
             {/* Left Arrow */}
             <button className="absolute left-0 z-10 w-16 h-16 bg-white rounded-full shadow-lg border-2 border-teal-200 flex items-center justify-center hover:bg-teal-50 transition-colors">
-              <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: '#178C95'}}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -216,7 +216,7 @@ const Home = () => {
 
             {/* Right Arrow */}
             <button className="absolute right-0 z-10 w-16 h-16 bg-white rounded-full shadow-lg border-2 border-teal-200 flex items-center justify-center hover:bg-teal-50 transition-colors">
-              <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: '#178C95'}}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -225,10 +225,10 @@ const Home = () => {
       </section>
 
       {/* Join Waitlist Section */}
-      <section className="bg-gradient-to-br from-teal-100 via-teal-300 to-teal-400 px-8 py-20">
+      <section className="px-8 py-20" style={{background: 'linear-gradient(to bottom right, #6DDADF, #178C95)'}}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden shadow-2xl min-h-[600px]">
-            <div className="lg:w-1/2 bg-gradient-to-b from-teal-600 via-teal-300 to-white p-16 relative flex flex-col justify-center">
+            <div className="lg:w-1/2 p-16 relative flex flex-col justify-center" style={{background: 'linear-gradient(to bottom, #178C95, #6DDADF, #ffffff)'}}>
               {/* Decorative plane */}
               <div className="absolute top-12 right-12">
                 <img src={planeWhite} alt="Plane" className="w-10 h-10 opacity-60" />
@@ -288,37 +288,37 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-teal-400 to-teal-600 px-8 py-12">
+      <footer className="px-8 py-12" style={{background: 'linear-gradient(to bottom right, #178C95, #178C95)'}}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex space-x-10 mb-6 md:mb-0">
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-lg font-medium">Service</a>
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-lg font-medium">Support</a>
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-lg font-medium">Company</a>
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-lg font-medium">Legal</a>
-              <a href="#" className="text-white hover:text-teal-200 transition-colors text-lg font-medium">Join Us</a>
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-lg font-medium">Service</a>
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-lg font-medium">Support</a>
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-lg font-medium">Company</a>
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-lg font-medium">Legal</a>
+              <a href="#" className="text-white hover:opacity-80 transition-colors text-lg font-medium">Join Us</a>
             </div>
             
             <div className="flex items-center space-x-4">
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={emailIcon} alt="Email" className="w-6 h-6" />
               </a>
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6" />
               </a>
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={twitterIcon} alt="Twitter" className="w-6 h-6" />
               </a>
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={instagramIcon} alt="Instagram" className="w-6 h-6" />
               </a>
-              <a href="#" className="bg-teal-700 p-3 rounded-lg hover:bg-teal-800 transition-colors">
+              <a href="#" className="p-3 rounded-lg hover:opacity-80 transition-colors" style={{backgroundColor: '#178C95'}}>
                 <img src={youtubeIcon} alt="YouTube" className="w-6 h-6" />
               </a>
             </div>
           </div>
           
-          <div className="text-center text-teal-200 text-base border-t border-teal-500 pt-8">
+          <div className="text-center text-base border-t pt-8" style={{color: '#6DDADF', borderColor: '#6DDADF'}}>
             Copyright © Sync&Explore. All rights reserved.
           </div>
         </div>

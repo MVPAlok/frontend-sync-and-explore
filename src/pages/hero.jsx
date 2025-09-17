@@ -9,7 +9,7 @@ import calendarWidget from '../assets/sample.png';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-200 via-teal-300 to-cyan-300 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-primary">
       {/* Decorative dots pattern - top right */}
       <div className="absolute top-0 right-0 w-48 h-48 opacity-10">
         <div className="grid grid-cols-12 gap-1.5 p-8">
@@ -26,18 +26,18 @@ const Hero = () => {
           <div className="absolute left-10 flex items-center">
             <img src={logoMountain} alt="Sync & Explore" className="h-16 w-auto" />
           </div>
-          <div className="bg-teal-600 rounded-full px-4 py-3">
+          <div className="rounded-full px-4 py-3 bg-white/10 backdrop-blur-sm">
             <div className="flex items-center space-x-1">
-              <button className="text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors text-sm font-medium">
+                <button className="text-white px-6 py-2.5 rounded-full transition-colors text-sm font-medium bg-white/10">
                 Home
               </button>
-              <button className="text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors text-sm font-medium">
+              <button className="text-white px-6 py-2.5 rounded-full hover:bg-white/10 transition-colors text-sm font-medium">
                 Features
               </button>
-              <button className="text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors text-sm font-medium">
+              <button className="text-white px-6 py-2.5 rounded-full hover:bg-white/10 transition-colors text-sm font-medium">
                 Testimonials
               </button>
-              <button className="text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors text-sm font-medium">
+              <button className="text-white px-6 py-2.5 rounded-full hover:bg-white/10 transition-colors text-sm font-medium">
                 Contact
               </button>
             </div>
@@ -59,7 +59,7 @@ const Hero = () => {
             <div className="flex flex-col lg:flex-row items-center min-h-[640px]">
               {/* Left Content */}
               <div className="lg:w-1/2 p-16 flex flex-col justify-center">
-                <h1 className="text-5xl lg:text-7xl font-bold text-black mb-8 leading-[1.1]">
+                <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-[1.1] gradient-text">
                   We Sync,AI Plans.
                   <br />
                   You Explore
@@ -68,10 +68,10 @@ const Hero = () => {
                   AI-powered travel buddy matching and itinerary planning — so you travel smart, not hard.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6">
-                  <button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3.5 rounded-full font-medium transition-colors text-base">
+                  <button className="primary-button">
                     Join waitlist
                   </button>
-                  <button className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-3.5 rounded-full font-medium transition-colors text-base">
+                  <button className="secondary-button">
                     See how it works
                   </button>
                 </div>
@@ -81,26 +81,27 @@ const Hero = () => {
               <div className="lg:w-1/2 p-12 lg:p-16 flex justify-center items-center">
                 <div className="relative w-full max-w-xl">
                   {/* Front portrait image */}
-                  <div className="relative z-20 drop-shadow-2xl">
+                  <div className="relative z-20 transform hover:scale-105 transition-transform duration-300">
                     <img
                       src={coastalBeach}
                       alt="Coastal beach view"
-                      className="w-60 h-80 object-cover rounded-2xl border-8 border-cyan-100 bg-white"
+                      className="w-60 h-80 object-cover rounded-2xl shadow-xl ring-4 ring-white/30"
                     />
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-overlay pointer-events-none"></div>
                   </div>
                   {/* Back portrait image */}
-                  <div className="absolute -top-10 right-6 z-10 drop-shadow-xl">
+                  <div className="absolute -top-10 right-6 z-10 transform hover:scale-105 transition-transform duration-300">
                     <img
                       src={mountainView}
                       alt="Mountain landscape"
-                      className="w-64 h-88 object-cover rounded-2xl border-8 border-teal-100 bg-white"
-                      style={{height: '22rem'}}
+                      className="w-64 h-[22rem] object-cover rounded-2xl shadow-xl ring-4 ring-white/30"
                     />
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-overlay pointer-events-none"></div>
                   </div>
                   {/* Calendar Icon Circle */}
                   <div className="absolute -left-10 top-1/2 -translate-y-1/2 z-30">
-                    <div className="bg-white p-5 rounded-full shadow-xl border-4 border-teal-200">
-                      <img src={calendarWidget} alt="Calendar" className="w-10 h-10" />
+                    <div className="bg-gradient-primary p-5 rounded-full shadow-xl ring-4 ring-white/30 transform hover:scale-110 transition-transform duration-300">
+                      <img src={calendarWidget} alt="Calendar" className="w-10 h-10 filter brightness-0 invert" />
                     </div>
                   </div>
                 </div>
