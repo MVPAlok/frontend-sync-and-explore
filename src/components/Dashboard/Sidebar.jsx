@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  FiGrid, FiCompass, FiMap, FiCalendar, FiUsers, 
-  FiDollarSign, FiBriefcase, FiUsers as FiGroup, 
-  FiUserPlus, FiSettings, FiHelpCircle, FiLogOut 
+import {
+  FiGrid, FiCompass, FiMap, FiCalendar, FiUsers,
+  FiDollarSign, FiBriefcase, FiUsers as FiGroup,
+  FiUserPlus, FiSettings, FiHelpCircle, FiLogOut
 } from 'react-icons/fi';
 
 const menuItems = [
@@ -24,55 +24,69 @@ const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="w-80 bg-white rounded-[27.56px] border border-[#0000000d] m-6 p-6 flex flex-col h-[867px]">
+    <div className="flex flex-col h-full bg-[#F4F4F4] transition-all duration-300 w-64 lg:w-72">
+      {/* Brand Logo */}
+      <div className="flex items-center gap-3 px-6 py-5">
+        <img src="/src/assets/brand-logo.png" alt="Logo" className="w-6 h-6" />
+        <span className="text-base font-semibold text-[#1A1D1F]">Sync & Explore</span>
+      </div>
+
       {/* User Profile */}
-      <div className="flex items-center gap-4 mb-8">
-        <div className="w-[99px] h-[99px] rounded-full overflow-hidden">
+      <div className="flex items-center gap-3 mb-6 px-6">
+        <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
           <img
-            src="/placeholder-profile.jpg"
+            src="https://media.licdn.com/dms/image/v2/D5603AQGGDb-eDrgqjw/profile-displayphoto-shrink_400_400/B56ZZZvN4rHQAg-/0/1745262273340?e=1761177600&v=beta&t=iwaxi8yaW7-E6Qx-_xa6KM7Uj0KXzqIuEw03XL1h_nU"
             alt="Profile"
             className="w-full h-full object-cover"
           />
         </div>
-        <div>
-          <h3 className="text-[28.9px] font-bold text-black">Hii, Sam-yuk</h3>
-          <p className="text-[28.9px] text-black">Traveller</p>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-[15px] font-medium text-[#1A1D1F] truncate">Hii, Abhishek</h3>
+          <p className="text-sm text-[#1A8F98]">Traveller</p>
         </div>
       </div>
 
       {/* Navigation Menu */}
-      <nav className="flex-1">
-        <div className="space-y-2">
-          {menuItems.map((item, index) => {
-            const Icon = item.icon;
-            const isActive = location.pathname === item.path;
-            
-            return (
-              <Link
-                key={index}
-                to={item.path}
-                className={`flex items-center gap-4 px-4 py-3 rounded-full transition-all ${
-                  isActive
-                    ? 'bg-[#1A8F98] text-white'
-                    : 'text-[#4B4B4B] hover:bg-gray-50'
-                }`}
-              >
-                <Icon className="w-6 h-6" />
-                <span className="text-[25.9px] font-medium">{item.label}</span>
-              </Link>
-            );
-          })}
-        </div>
+      <nav className="flex-1 space-y-0.5 px-4">
+        {menuItems.map((item, index) => {
+          const Icon = item.icon;
+          const isActive = location.pathname === item.path;
+
+          return (
+            <Link
+              key={index}
+              to={item.path}
+              className={`flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] transition-all duration-200 
+                ${isActive
+                  ? 'bg-[#1A8F98] text-white'
+                  : 'text-[#64748B] hover:bg-[#1A8F98]/5 hover:text-[#1A8F98]'
+                }
+                group
+              `}
+            >
+              <Icon 
+                className={`w-[18px] h-[18px] flex-shrink-0 transition-colors duration-200
+                  ${isActive ? 'text-white' : 'text-[#64748B] group-hover:text-[#1A8F98]'}`}
+              />
+              <span className={`font-medium truncate ${
+                isActive ? '' : 'group-hover:text-[#1A8F98]'
+              }`}>{item.label}</span>
+            </Link>
+          );
+        })}
       </nav>
 
       {/* Logout Button */}
-      <Link
-        to="/logout"
-        className="flex items-center gap-4 px-4 py-3 text-[#1a8f98] font-bold text-[25.9px]"
-      >
-        <FiLogOut className="w-8 h-8" />
-        <span>Log Out</span>
-      </Link>
+      <div className="mt-4 px-4 pb-5">
+        <button 
+          className="flex items-center gap-3 px-4 py-2.5 w-full text-[14px] text-[#64748B] 
+            hover:bg-[#1A8F98]/5 hover:text-[#1A8F98] rounded-lg transition-all duration-200 
+            group"
+        >
+          <FiLogOut className="w-[18px] h-[18px] flex-shrink-0 transition-colors duration-200 group-hover:text-[#1A8F98]" />
+          <span className="font-medium">Log Out</span>
+        </button>
+      </div>
     </div>
   );
 };

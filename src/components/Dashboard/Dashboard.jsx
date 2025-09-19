@@ -16,27 +16,32 @@ const AccountSettings = () => <div>Account Settings</div>;
 const HelpSupport = () => <div>Help & Support</div>;
 
 const Dashboard = () => {
-
   return (
-    <div className="flex min-h-screen bg-gradient-primary">
+    <div className="flex h-screen bg-[#F4F4F4] overflow-hidden">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 p-6">
-        <Routes>
-          <Route path="/" element={<DashboardHome />} />
-          <Route path="/explore" element={<ExploreTrips />} />
-          <Route path="/my-trips" element={<MyTrips />} />
-          <Route path="/calendar" element={<CalendarSync />} />
-          <Route path="/buddies" element={<TravelBuddies />} />
-          <Route path="/budget" element={<BudgetPlanner />} />
-          <Route path="/stays" element={<StayOptions />} />
-          <Route path="/forums" element={<GroupForums />} />
-          <Route path="/invite" element={<InviteFriends />} />
-          <Route path="/settings" element={<AccountSettings />} />
-          <Route path="/help" element={<HelpSupport />} />
-        </Routes>
+      <div className="flex-1 overflow-hidden p-6">
+        <div className="h-full bg-white rounded-2xl shadow-sm">
+          <div className="h-full p-6 overflow-y-auto">
+            <div className="max-w-[1100px] mx-auto">
+              <Routes>
+                <Route path="/" element={<DashboardHome />} />
+                <Route path="/explore" element={<ExploreTrips />} />
+                <Route path="/my-trips" element={<MyTrips />} />
+                <Route path="/calendar" element={<CalendarSync />} />
+                <Route path="/buddies" element={<TravelBuddies />} />
+                <Route path="/budget" element={<BudgetPlanner />} />
+                <Route path="/stays" element={<StayOptions />} />
+                <Route path="/forums" element={<GroupForums />} />
+                <Route path="/invite" element={<InviteFriends />} />
+                <Route path="/settings" element={<AccountSettings />} />
+                <Route path="/help" element={<HelpSupport />} />
+              </Routes>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
