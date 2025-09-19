@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Navigation from '../components/Navigation';
 
 // Import all images
 import logo from '../assets/sample.png';
@@ -40,27 +42,7 @@ const Home = () => {
         {/* White container wider like design */}
         <div className="bg-white/95 rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] relative overflow-hidden mx-auto border border-teal-100" style={{width: '94%', minHeight: '85vh'}}>
           {/* Navigation inside white area */}
-          <nav className="flex justify-center items-center px-8 py-8 relative z-10">
-            <div className="absolute left-8 flex items-center">
-              <img src={logo} alt="Sync & Explore" className="h-12 w-auto" />
-            </div>
-            <div className="rounded-full px-3 py-3" style={{backgroundColor: '#178C95'}}>
-              <div className="flex items-center space-x-2">
-                <button className="text-white px-6 py-2.5 rounded-full transition-colors text-sm font-medium" style={{backgroundColor: '#178C95'}}>
-                  Home
-                </button>
-                <button className="text-white px-6 py-2.5 rounded-full hover:opacity-80 transition-colors text-sm font-medium">
-                  Features
-                </button>
-                <button className="text-white px-6 py-2.5 rounded-full hover:opacity-80 transition-colors text-sm font-medium">
-                  Testimonials
-                </button>
-                <button className="text-white px-6 py-2.5 rounded-full hover:opacity-80 transition-colors text-sm font-medium">
-                  Contact
-                </button>
-              </div>
-            </div>
-          </nav>
+          <Navigation logo={logo} />
 
           {/* Hero Content */}
           <div className="px-8 lg:px-12 pb-12">
